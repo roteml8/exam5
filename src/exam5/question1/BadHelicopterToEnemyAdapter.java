@@ -1,10 +1,10 @@
 package exam5.question1;
 
-public class HelicopterToEnemyAdapter implements Enemy {
+public class BadHelicopterToEnemyAdapter implements Enemy {
 
-	BadHelicopter badHelicopter;
+	private BadHelicopter badHelicopter;
 
-	public HelicopterToEnemyAdapter(BadHelicopter badHelicopter) {
+	public BadHelicopterToEnemyAdapter(BadHelicopter badHelicopter) {
 		this.badHelicopter = badHelicopter;
 	}
 

@@ -6,9 +6,9 @@ public class Runner {
 	public static void main(String[] args) {
 
 		BadHelicopter badHelicopter = new BadHelicopter();
-		EnemyTank tank = new EnemyTank();
+		Enemy tank = new EnemyTank();
 		
-		HelicopterToEnemyAdapter helicopterAdapter = new HelicopterToEnemyAdapter(badHelicopter);
+		Enemy badHelicopterAdapter = new BadHelicopterToEnemyAdapter(badHelicopter);
 		
 		tank.driveBackward();
 		tank.driveForward();
@@ -17,11 +17,11 @@ public class Runner {
 		tank.fireWeapon();
 		System.out.println("===================");
 		
-		helicopterAdapter.driveBackward();
-		helicopterAdapter.driveForward();
-		helicopterAdapter.turnLeft();
-		helicopterAdapter.turnRight();
-		helicopterAdapter.fireWeapon();
+		badHelicopterAdapter.driveBackward();
+		badHelicopterAdapter.driveForward();
+		badHelicopterAdapter.turnLeft();
+		badHelicopterAdapter.turnRight();
+		badHelicopterAdapter.fireWeapon();
 	}
 
 }
